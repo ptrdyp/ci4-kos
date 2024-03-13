@@ -1,0 +1,116 @@
+CRITICAL - 2024-03-04 05:56:12 --> ErrorException: Undefined property: CodeIgniter\View\View::$uri
+in APPPATH\Views\admin\layout\template.php on line 18.
+ 1 APPPATH\Views\admin\layout\template.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$uri', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 5 APPPATH\Controllers\Admin.php(22): view('admin/layout/template', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->kos()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-04 06:15:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/pages/kamar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/kamar.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/kamar', [], true)
+ 3 APPPATH\Views\admin\layout\template.php(66): view('admin/pages/kamar')
+ 4 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 7 APPPATH\Controllers\Admin.php(37): view('admin/layout/template', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->kamar()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-04 12:06:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/pages/admin.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/admin.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/admin', [], true)
+ 3 APPPATH\Views\admin\layout\template.php(78): view('admin/pages/admin')
+ 4 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 7 APPPATH\Controllers\Admin.php(70): view('admin/layout/template', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->akun_admin()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-04 12:21:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/layout/template.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/layout/template.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/layout/template', [], true)
+ 3 APPPATH\Controllers\Admin.php(14): view('auth/layout/template', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-04 16:30:49 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\xampp\htdocs\ci4-kos\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\xampp\htdocs\ci4-kos\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\xampp\htdocs\ci4-kos\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\xampp\htdocs\ci4-kos\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\xampp\htdocs\ci4-kos\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\xampp\htdocs\ci4-kos\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-03-04 16:32:49 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 3306?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 3306? in D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'D:\\xampp\\htdocs...', 72)
+#1 D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php(72): pg_connect('host=localhost ...')
+#2 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#6 D:\xampp\htdocs\ci4-kos\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 D:\xampp\htdocs\ci4-kos\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 D:\xampp\htdocs\ci4-kos\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 D:\xampp\htdocs\ci4-kos\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 D:\xampp\htdocs\ci4-kos\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 D:\xampp\htdocs\ci4-kos\spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-03-04 16:34:17 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 3306?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 3306? in D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'D:\\xampp\\htdocs...', 72)
+#1 D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php(72): pg_connect('host=localhost ...')
+#2 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#6 D:\xampp\htdocs\ci4-kos\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 D:\xampp\htdocs\ci4-kos\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 D:\xampp\htdocs\ci4-kos\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 D:\xampp\htdocs\ci4-kos\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 D:\xampp\htdocs\ci4-kos\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 D:\xampp\htdocs\ci4-kos\spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-03-04 16:40:34 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "127.0.0.1" and accepting
+	TCP/IP connections on port 3306? in D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'D:\\xampp\\htdocs...', 72)
+#1 D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php(72): pg_connect('host=127.0.0.1 ...')
+#2 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#6 D:\xampp\htdocs\ci4-kos\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 D:\xampp\htdocs\ci4-kos\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 D:\xampp\htdocs\ci4-kos\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 D:\xampp\htdocs\ci4-kos\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 D:\xampp\htdocs\ci4-kos\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 D:\xampp\htdocs\ci4-kos\spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
