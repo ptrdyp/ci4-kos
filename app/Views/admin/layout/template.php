@@ -16,6 +16,7 @@
       </a>
       <ul class="side-menu">
         <h5>Data</h5>
+        <!-- Super Admin -->
         <li class="<?= ($active == '') ? 'active' : ''; ?>">
           <a href="<?= base_url('admin') ?>"><i class="bx bxs-dashboard"></i>Dashboard</a>
         </li>
