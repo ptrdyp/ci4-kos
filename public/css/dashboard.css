@@ -23,13 +23,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   background: var(--grey);
-  overflow-x: hidden;
 }
 
 body.dark {
@@ -46,7 +41,7 @@ body.dark {
   background: var(--light);
   width: 230px;
   height: 100%;
-  z-index: 2000;
+  z-index: 1000;
   overflow-x: hidden;
   scrollbar-width: none;
   transition: all 0.3s ease;
@@ -194,7 +189,9 @@ li {
   position: relative;
   width: calc(100% - 230px);
   left: 230px;
+  top: 56px;
   transition: all 0.3s ease;
+  z-index: 999;
 }
 
 .sidebar.close ~ .content {
@@ -202,20 +199,26 @@ li {
   left: 60px;
 }
 
-.content nav {
+nav {
   height: 56px;
+  width: calc(100% - 230px);
   background: var(--light);
   padding: 0 24px 0 0;
   display: flex;
   align-items: center;
-  grid-gap: 24px;
-  position: sticky;
+  gap: 24px;
+  position: fixed;
   top: 0;
-  left: 0;
-  z-index: 1000;
+  left: 230px;
+  z-index: 9999;
 }
 
-.content nav::before {
+.sidebar.close ~ nav {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+nav::before {
   content: "";
   position: absolute;
   width: 40px;
@@ -226,28 +229,28 @@ li {
   box-shadow: -20px -20px var(--light);
 }
 
-.content nav a {
+nav a {
   color: var(--dark);
 }
 
-.content nav .bx.bx-menu {
+nav .bx.bx-menu {
   cursor: pointer;
   color: var(--dark);
 }
 
-.content nav form {
+nav form {
   max-width: 400px;
   width: 100%;
   margin-right: auto;
 }
 
-.content nav form .form-input {
+nav form .form-input {
   display: flex;
   align-items: center;
   height: 36px;
 }
 
-.content nav form .form-input input {
+nav form .form-input input {
   flex-grow: 1;
   padding: 0 16px;
   height: 100%;
@@ -259,7 +262,7 @@ li {
   color: var(--dark);
 }
 
-.content nav form .form-input button {
+nav form .form-input button {
   width: 80px;
   height: 100%;
   display: flex;
@@ -274,12 +277,12 @@ li {
   cursor: pointer;
 }
 
-.content nav .notif {
+nav .notif {
   font-size: 20px;
   position: relative;
 }
 
-.content nav .notif .count {
+nav .notif .count {
   position: absolute;
   top: -6px;
   right: -6px;
@@ -296,7 +299,7 @@ li {
   justify-content: center;
 }
 
-.content nav .profile {
+nav .profile {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -307,16 +310,16 @@ li {
   border-radius: 16px;
 }
 
-.content nav .profile > i{
+nav .profile > i{
   cursor: pointer;
 }
 
-.content nav .profile .left{
+nav .profile .left{
   display: flex;
   gap: 15px;
 }
 
-.content nav .profile .left img{
+nav .profile .left img{
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -324,23 +327,24 @@ li {
   object-position: top;
 }
 
-.content nav .profile .left .user {
+nav .profile .left .user {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
 
-.content nav .profile .left .user h5{
+nav .profile .left .user h5{
   font-size: 14px;
   font-weight: 600;
 } 
 
-.content nav .profile .left .user a{
+nav .profile .left .user a{
   font-size: 12px;
+  text-transform: capitalize;
 }
 
-.content nav .theme-toggle {
+nav .theme-toggle {
   display: block;
   min-width: 50px;
   height: 25px;
@@ -350,7 +354,7 @@ li {
   border-radius: 25px;
 }
 
-.content nav .theme-toggle::before {
+nav .theme-toggle::before {
   content: "";
   position: absolute;
   top: 2px;
@@ -362,7 +366,7 @@ li {
   transition: all 0.3s ease;
 }
 
-.content nav #theme-toggle:checked + .theme-toggle::before {
+nav #theme-toggle:checked + .theme-toggle::before {
   left: calc(100% - (25px - 4px) - 2px);
 }
 
@@ -376,7 +380,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  grid-gap: 16px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
@@ -390,7 +394,7 @@ li {
 .content main .header .left .breadcrumb {
   display: flex;
   align-items: center;
-  grid-gap: 16px;
+  gap: 16px;
 }
 
 .content main .header .left .breadcrumb li {
@@ -410,7 +414,7 @@ li {
 .content main .insights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 24px;
+  gap: 24px;
   margin-top: 36px;
 }
 
@@ -420,7 +424,7 @@ li {
   border-radius: 24px;
   display: flex;
   align-items: center;
-  grid-gap: 24px;
+  gap: 24px;
   cursor: pointer;
 }
 
@@ -468,7 +472,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  grid-gap: 24px;
+  gap: 24px;
   margin-top: 24px;
   width: 100%;
   color: var(--dark);
@@ -484,7 +488,7 @@ li {
 .content main .bottom-data .header {
   display: flex;
   align-items: center;
-  grid-gap: 16px;
+  gap: 16px;
   margin-bottom: 24px;
 }
 
@@ -522,7 +526,7 @@ li {
 .content main .bottom-data .orders table tr td:first-child {
   display: flex;
   align-items: center;
-  grid-gap: 12px;
+  gap: 12px;
   padding-left: 6px;
 }
 
@@ -564,7 +568,7 @@ li {
 
 /* Profile */
 .content main .bottom-data .user-profile{
-  width: 50%;
+  width: 80%;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -586,7 +590,7 @@ li {
 }
 
 .content main .bottom-data .user-data {
-  width: 50%;
+  width: 80%;
   overflow-y: auto;
   padding: 40px 32px;
   border-radius: 8px;
@@ -689,7 +693,7 @@ li {
 }
 
 @media screen and (max-width: 1023px) {
-  .content nav .profile .left .user {
+  nav .profile .left .user {
     display: none;
   }
 }
@@ -700,22 +704,27 @@ li {
   }
 
   .content {
-    width: calc(100% - 60px);
+    width: calc(100% - 200px);
     left: 200px;
   }
 
-  .content nav .profile .left .user {
+  nav {
+    width: calc(100% - 200px);
+    left: 200px;
+  }
+
+  nav .profile .left .user {
     display: none;
   }
 
 }
 
 @media screen and (max-width: 576px) {
-  .content nav form .form-input input {
+  nav form .form-input input {
     display: none;
   }
 
-  .content nav form .form-input button {
+  nav form .form-input button {
     width: auto;
     height: auto;
     background: transparent;
@@ -723,12 +732,12 @@ li {
     border-radius: none;
   }
 
-  .content nav form.show .form-input input {
+  nav form.show .form-input input {
     display: block;
     width: 100%;
   }
 
-  .content nav form.show .form-input button {
+  nav form.show .form-input button {
     width: 36px;
     height: 100%;
     color: var(--light);
@@ -736,12 +745,12 @@ li {
     border-radius: 0 36px 36px 0;
   }
 
-  .content nav form.show ~ .notif,
-  .content nav form.show ~ .profile {
+  nav form.show ~ .notif,
+  nav form.show ~ .profile {
     display: none;
   }
 
-  .content nav .profile .left .user {
+  nav .profile .left .user {
     display: none;
   }
 

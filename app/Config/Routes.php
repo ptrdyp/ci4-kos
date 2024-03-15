@@ -19,3 +19,5 @@ $routes->get('/admin/kamar', 'Admin::kamar');
 $routes->get('/admin/fasilitas', 'Admin::fasilitas');
 $routes->get('/admin/penyewaan', 'Admin::penyewaan');
 $routes->get('/admin/akun-admin', 'Admin::akun_admin');
+
+$routes->get('/', 'User::index');

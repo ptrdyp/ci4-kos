@@ -10,16 +10,16 @@ sideLinks.forEach((item) => {
   });
 });
 
-const menuBar = document.querySelector(".content nav .bx.bx-menu");
+const menuBar = document.querySelector("nav .bx.bx-menu");
 const sideBar = document.querySelector(".sidebar");
 
 menuBar.addEventListener("click", () => {
   sideBar.classList.toggle("close");
 });
 
-const searchBtn = document.querySelector(".content nav form .form-input button");
-const searchBtnIcon = document.querySelector(".content nav form .form-input button .bx");
-const searchForm = document.querySelector(".content nav form");
+const searchBtn = document.querySelector("nav form .form-input button");
+const searchBtnIcon = document.querySelector("nav form .form-input button .bx");
+const searchForm = document.querySelector("nav form");
 
 searchBtn.addEventListener("click", function (e) {
   if (window.innerWidth < 576) {

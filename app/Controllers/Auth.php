@@ -101,9 +101,16 @@ class Auth extends BaseController
                 session() -> set('no_hp', $cek['no_hp']);
                 session() -> set('level', $cek['level']);
                 session() -> set('foto', $cek['foto']);
-                session()->set('level_name', $levelName);
+                session() -> set('level_name', $levelName);
+
+                $level = session() -> get('level');
                 
-                return redirect() -> to(base_url('/admin'));
+                if ($level == 3) {
+                    return redirect() -> to(base_url('/'));
+                } else {
+                    return redirect() -> to(base_url('/admin'));
+                }
+
             } else {
                 session() -> setFlashdata('error', 'Login gagal, username atau password tidak cocok');
                 return redirect() -> to(base_url('/auth/login'));
