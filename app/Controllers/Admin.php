@@ -3,15 +3,18 @@
 namespace App\Controllers;
 
 use App\Models\Model_Auth;
+use App\Models\Model_Fakultas;
 
 class Admin extends BaseController
 {
 
     protected $Model_Auth;
+    protected $Model_Fakultas;
 
     public function __construct() {
         helper('form');
         $this -> Model_Auth = new Model_Auth();
+        $this -> Model_Fakultas = new Model_Fakultas();
     }
 
     public function index(): string
@@ -75,6 +78,18 @@ class Admin extends BaseController
         $data = [
             'judul' => 'Daftar Admin',
             'page' => 'admin/pages/akun_admin',
+            'active' => $uri->getSegment(2)
+        ];
+        return view('admin/layout/template', $data);
+    }
+
+    public function fakultas(): string
+    {
+        $uri = service('uri');
+        $data = [
+            'judul' => 'Data Fakultas',
+            'page' => 'admin/pages/fakultas',
+            'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);

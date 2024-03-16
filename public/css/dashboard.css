@@ -23,6 +23,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+.text-capitalize {
+  text-transform: capitalize;
+}
+
 body {
   background: var(--grey);
 }
@@ -341,7 +345,6 @@ nav .profile .left .user h5{
 
 nav .profile .left .user a{
   font-size: 12px;
-  text-transform: capitalize;
 }
 
 nav .theme-toggle {
@@ -524,9 +527,6 @@ nav #theme-toggle:checked + .theme-toggle::before {
 }
 
 .content main .bottom-data .orders table tr td:first-child {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   padding-left: 6px;
 }
 
@@ -568,7 +568,7 @@ nav #theme-toggle:checked + .theme-toggle::before {
 
 /* Profile */
 .content main .bottom-data .user-profile{
-  width: 80%;
+  width: 90%;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -590,7 +590,7 @@ nav #theme-toggle:checked + .theme-toggle::before {
 }
 
 .content main .bottom-data .user-data {
-  width: 80%;
+  width: 90%;
   overflow-y: auto;
   padding: 40px 32px;
   border-radius: 8px;

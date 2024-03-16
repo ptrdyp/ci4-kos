@@ -78,3 +78,419 @@ INFO - 2024-03-15 20:55:13 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-03-15 20:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-15 20:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-15 20:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 21:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 21:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 21:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 21:36:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 21:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 21:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 21:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 21:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 21:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 21:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 21:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:10:33 --> ErrorException: Undefined variable $fakultas
+in APPPATH\Views\admin\pages\fakultas.php on line 21.
+ 1 APPPATH\Views\admin\pages\fakultas.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fakultas', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(91): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:15:37 --> ErrorException: Undefined property: App\Controllers\Admin::$Model_Fakultas
+in APPPATH\Controllers\Admin.php on line 90.
+ 1 APPPATH\Controllers\Admin.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$Model_Fakultas', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Controllers\\Admin.php', 90)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:18:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:20:29 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:20:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:20:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:21:13 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:21:14 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:21:15 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:21:30 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:21:31 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:21:51 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:22:58 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:25:15 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:25:16 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:28:49 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:29:25 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:29:28 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:33:37 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:33:38 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:36:32 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:36:33 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:37:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:37:26 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 APPPATH\Views\admin\pages\fakultas.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:39:42 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 4 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 5 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 8 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 22:39:43 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Views\admin\pages\fakultas.php on line 24.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas', [], true)
+ 4 APPPATH\Views\admin\layout\template.php(105): view('admin/pages/fakultas')
+ 5 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 8 APPPATH\Controllers\Admin.php(95): view('admin/layout/template', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->fakultas()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 22:42:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:44:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:46:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:48:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:53:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 22:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

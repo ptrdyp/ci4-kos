@@ -90,7 +90,7 @@
           <img src="<?= base_url() ?>/img/profile.jpg">
           <div class="user">
               <h5><?= session() -> get('nama') ?></h5>
-              <a href="<?= base_url('admin/profile') ?>"><?= session() -> get('level_name') ?></a>
+              <a href="<?= base_url('admin/profile') ?>" class="text-capitalize"><?= session() -> get('level_name') ?></a>
           </div>
         </div>
         <a href="<?= base_url('admin/profile') ?>"><i class='bx bxs-chevron-right'></i></a>
@@ -100,10 +100,22 @@
 
     <!-- Main Content -->
     <div class="content">
+      <main> 
+        <div class="header">
+            <div class="left">
+                <h1><?= $judul ?></h1>
+                <ul class="breadcrumb">
+                    <li class="text-capitalize"><a href="#"><?= session() -> get('level_name') ?></a></li>/
+                    <li><a href="#" class="active"><?= $judul ?></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <?php if($page) {
+          echo view($page);
+        } ?>
 
-      <?php if($page) {
-        echo view($page);
-      } ?>
+      </main>
       
     </div>
 
