@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="<?= base_url(); ?>/css/dashboard.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
     <title><?= $judul ?></title>
   </head>
   <body>
@@ -12,7 +18,7 @@
     <div class="sidebar">
       <a href="#" class="logo">
         <i class="bx bx-home-smile"></i>
-        <div class="logo-name"><span>Soedir</span>Kost</div>
+        <div class="logo-name"><span><?= $setting['nama_web_depan'] ?></span><?= $setting['nama_web_belakang'] ?></div>
       </a>
 
       <ul class="side-menu">
@@ -56,6 +62,9 @@
         <h5>lainnya</h5>
         <li class="<?= ($active == 'fakultas') ? 'active' : ''; ?>">
           <a href="<?= base_url('admin/fakultas') ?>"><i class='bx bxs-school'></i>Fakultas</a>
+        </li>
+        <li class="<?= ($active == 'setting') ? 'active' : ''; ?>">
+          <a href="<?= base_url('admin/setting') ?>"><i class='bx bx-cog'></i>Pengaturan</a>
         </li>
       </ul>
 
@@ -120,5 +129,10 @@
     </div>
 
     <script src="<?= base_url(); ?>/js/dashboard.js"></script>
+    <script>
+      var setting = <?php echo json_encode($setting); ?>;
+    </script>
+    <script src="<?= base_url(); ?>/js/map.js"></script>
+
   </body>
 </html>

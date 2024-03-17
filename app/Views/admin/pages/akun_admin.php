@@ -19,7 +19,7 @@
             <tbody>
                 <tr>
                     <td>
-                        <img src="images/profile-1.jpg">
+                        <img src="images/profile-1.jpg" class="user-pict">
                         <p>John Doe</p>
                     </td>
                     <td>14-08-2023</td>

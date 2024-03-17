@@ -19,6 +19,11 @@ $routes->get('/admin/kamar', 'Admin::kamar');
 $routes->get('/admin/fasilitas', 'Admin::fasilitas');
 $routes->get('/admin/penyewaan', 'Admin::penyewaan');
 $routes->get('/admin/akun-admin', 'Admin::akun_admin');
-$routes->get('/admin/fakultas', 'Admin::fakultas');
+
+$routes->get('/admin/setting', 'Setting::index');
+$routes->post('/admin/update-setting', 'Setting::update_setting');
+
+$routes->get('/admin/fakultas', 'Fakultas::index');
+$routes->post('/admin/insert-fakultas', 'Admin::insert_fakultas');
 
 $routes->get('/', 'User::index');

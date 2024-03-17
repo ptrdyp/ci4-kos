@@ -54,3 +54,17 @@ toggler.addEventListener("change", function () {
     document.body.classList.remove("dark");
   }
 });
+
+const toggleButton = document.getElementById("toggleAddButton");
+const addElement = document.querySelector(".add");
+const closeAddView = document.querySelector(".add-close");
+
+toggleButton.addEventListener("click", () => {
+  console.log("click");
+  addElement.style.display = "block";
+});
+
+closeAddView.addEventListener("click", () => {
+  console.log("click close");
+  addElement.style.display = "none";
+});

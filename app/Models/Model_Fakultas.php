@@ -10,5 +10,8 @@ class Model_Fakultas extends Model
         return $this->db->table('area_fakultas')->get()->getResultArray();  
     }
     
+    public function insertData($data) {
+        $this -> db -> table('area_fakultas') -> insert($data);
+    }
     
 }
