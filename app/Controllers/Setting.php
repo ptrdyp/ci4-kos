@@ -2,16 +2,19 @@
 
 namespace App\Controllers;
 
+use App\Models\Model_Fakultas;
 use App\Models\Model_Setting;
 
 class Setting extends BaseController
 {
 
     protected $Model_Setting;
+    protected $Model_Fakultas;
 
     public function __construct() {
         helper('form');
         $this -> Model_Setting = new Model_Setting();
+        $this -> Model_Fakultas = new Model_Fakultas();
     }
 
     public function index(): string {
@@ -20,6 +23,7 @@ class Setting extends BaseController
             'judul' => 'Pengaturan Website',
             'page' => 'admin/pages/setting',
             'setting' => $this -> Model_Setting -> getData(),
+            'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);

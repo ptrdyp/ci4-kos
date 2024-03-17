@@ -22,33 +22,33 @@ class Fakultas extends BaseController
         $data = [
             'judul' => 'Data Fakultas',
             'page' => 'admin/pages/fakultas',
-            'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'setting' => $this -> Model_Setting -> getData(),
+            'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);
     }
 
-    public function insert_fakultas() {
-        if ($this -> validate ([
-            'nama_fakultas' => [
-                'label' => 'Nama Fakultas',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi'
-                ]
-            ],
-            'geojson' => [
-                'label' => 'Geojson',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi'
-                ]
-            ],
-        ])) {
+    // public function insert_fakultas() {
+    //     if ($this -> validate ([
+    //         'nama_fakultas' => [
+    //             'label' => 'Nama Fakultas',
+    //             'rules' => 'required',
+    //             'errors' => [
+    //                 'required' => '{field} harus diisi'
+    //             ]
+    //         ],
+    //         'geojson' => [
+    //             'label' => 'Geojson',
+    //             'rules' => 'required',
+    //             'errors' => [
+    //                 'required' => '{field} harus diisi'
+    //             ]
+    //         ],
+    //     ])) {
 
-        } else {
+    //     } else {
 
-        }
-    }
+    //     }
+    // }
 }

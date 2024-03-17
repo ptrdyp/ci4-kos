@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Model_Auth;
+use App\Models\Model_Fakultas;
 use App\Models\Model_Setting;
 
 class Admin extends BaseController
@@ -10,11 +11,13 @@ class Admin extends BaseController
 
     protected $Model_Auth;
     protected $Model_Setting;
+    protected $Model_Fakultas;
 
     public function __construct() {
         helper('form');
         $this -> Model_Setting = new Model_Setting();
         $this -> Model_Auth = new Model_Auth();
+        $this -> Model_Fakultas = new Model_Fakultas();
     }
 
     public function index(): string {
@@ -23,6 +26,7 @@ class Admin extends BaseController
             'judul' => 'Dashboard',
             'page' => 'admin/pages/dashboard',
             'setting' => $this -> Model_Setting -> getData(),
+            'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);
@@ -34,6 +38,7 @@ class Admin extends BaseController
             'judul' => 'Daftar Kos',
             'page' => 'admin/pages/kos',
             'setting' => $this -> Model_Setting -> getData(),
+            'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);
@@ -45,6 +50,7 @@ class Admin extends BaseController
             'judul' => 'Daftar Kamar',
             'page' => 'admin/pages/kamar',
             'setting' => $this -> Model_Setting -> getData(),
+            'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);
@@ -56,6 +62,7 @@ class Admin extends BaseController
             'judul' => 'Daftar Fasilitas',
             'page' => 'admin/pages/fasilitas',
             'setting' => $this -> Model_Setting -> getData(),
+            'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);
@@ -67,6 +74,7 @@ class Admin extends BaseController
             'judul' => 'Daftar Penyewaan',
             'page' => 'admin/pages/penyewaan',
             'setting' => $this -> Model_Setting -> getData(),
+            'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);
@@ -78,6 +86,7 @@ class Admin extends BaseController
             'judul' => 'Daftar Admin',
             'page' => 'admin/pages/akun_admin',
             'setting' => $this -> Model_Setting -> getData(),
+            'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);
@@ -89,6 +98,7 @@ class Admin extends BaseController
             'judul' => 'Profil Saya',
             'page' => 'admin/pages/profile',
             'setting' => $this -> Model_Setting -> getData(),
+            'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);

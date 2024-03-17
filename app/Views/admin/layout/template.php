@@ -128,11 +128,15 @@
       
     </div>
 
-    <script src="<?= base_url(); ?>/js/dashboard.js"></script>
     <script>
       var setting = <?php echo json_encode($setting); ?>;
+      var fakultas = <?php echo json_encode($fakultas); ?>;
     </script>
+
     <script src="<?= base_url(); ?>/js/map.js"></script>
+    
+    <script src="<?= base_url(); ?>/js/dashboard.js"></script>
+
 
   </body>
 </html>

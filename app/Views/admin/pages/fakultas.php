@@ -1,3 +1,9 @@
+<div class="card-row">
+    <div class="card-col">
+        <div id="map" style="width: 100%; height: 50vh;"></div>
+    </div>
+</div>
+
 <div class="add">
     <div class="card-row">
         <div class="card-col">
@@ -18,7 +24,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div id="map" style="width: 100%; height: 50vh;"></div>
+                        <div id="map" style="width: 100%; height: 50vh;" class="mt-12"></div>
                     </div>
                 </div>
                 <div class="row">
@@ -55,8 +61,8 @@
                     <th>No</th>
                     <th>Nama Fakultas</th>
                     <th>Warna</th>
-                    <th class="img">Gambar</th>
-                    <th>Aksi</th>
+                    <th class="text-center">Gambar</th>
+                    <th class="text-center">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -66,10 +72,10 @@
                         <td><?= $no++ ?></td>
                         <td><?= $key['nama_fakultas']; ?></td>
                         <td style="background-color: <?= $key['warna']; ?>;"><?= $key['warna']; ?></td>
-                        <td class="img">
+                        <td class="text-center">
                             <img src="<?= !empty($key['gambar']) ? $key['gambar'] : base_url().'img/default-view.jpeg'; ?>">
                         </td>
-                        <td>
+                        <td class="text-center">
                             <button class="btn btn-border-warning">Ubah</button>
                             <button class="btn btn-border-danger">Hapus</button>
                         </td>
