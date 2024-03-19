@@ -22,3 +22,3002 @@ INFO - 2024-03-19 16:04:34 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-03-19 16:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-19 16:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-19 16:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 16:16:59 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;area_fakultas&quot; does not exist
+LINE 2: FROM &quot;area_fakultas&quot;
+             ^ in D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 187)
+#1 D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'SELECT *\nFROM "...')
+#2 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 D:\xampp\htdocs\ci4-kos\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 D:\xampp\htdocs\ci4-kos\app\Models\Model_Fakultas.php(10): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\ci4-kos\app\Controllers\Fakultas.php(26): App\Models\Model_Fakultas->getAllData()
+#7 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(941): App\Controllers\Fakultas->index()
+#8 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+#9 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\ci4-kos\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-19 16:16:59 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;area_fakultas&quot; does not exist
+LINE 2: FROM &quot;area_fakultas&quot;
+             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "area_fakultas"', [], false)
+ 2 APPPATH\Models\Model_Fakultas.php(10): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Fakultas.php(26): App\Models\Model_Fakultas->getAllData()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:16:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;area_fakultas&quot; does not exist
+LINE 2: FROM &quot;area_fakultas&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "area_fakultas"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "area_fakultas"')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "area_fakultas"', [], false)
+ 4 APPPATH\Models\Model_Fakultas.php(10): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Fakultas.php(26): App\Models\Model_Fakultas->getAllData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:16:59 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  relation &quot;area_fakultas&quot; does not exist
+LINE 2: FROM &quot;area_fakultas&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;area_fakultas&quot; does not exist
+LINE 2: FROM &quot;area_fakultas&quot;
+             ^', 'D:\\xampp\\htdocs\\ci4-kos\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'SELECT *
+FROM "area_fakultas"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "area_fakultas"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "area_fakultas"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "area_fakultas"', [], false)
+ 6 APPPATH\Models\Model_Fakultas.php(10): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Fakultas.php(26): App\Models\Model_Fakultas->getAllData()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 16:18:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 16:18:46 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;area_fakultas&quot; does not exist
+LINE 2: FROM &quot;area_fakultas&quot;
+             ^ in D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 187)
+#1 D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'SELECT *\nFROM "...')
+#2 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 D:\xampp\htdocs\ci4-kos\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 D:\xampp\htdocs\ci4-kos\app\Models\Model_Fakultas.php(10): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\ci4-kos\app\Controllers\Fakultas.php(26): App\Models\Model_Fakultas->getAllData()
+#7 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(941): App\Controllers\Fakultas->index()
+#8 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+#9 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\ci4-kos\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-19 16:18:46 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;area_fakultas&quot; does not exist
+LINE 2: FROM &quot;area_fakultas&quot;
+             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "area_fakultas"', [], false)
+ 2 APPPATH\Models\Model_Fakultas.php(10): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Fakultas.php(26): App\Models\Model_Fakultas->getAllData()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:18:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;area_fakultas&quot; does not exist
+LINE 2: FROM &quot;area_fakultas&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "area_fakultas"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "area_fakultas"')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "area_fakultas"', [], false)
+ 4 APPPATH\Models\Model_Fakultas.php(10): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Fakultas.php(26): App\Models\Model_Fakultas->getAllData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:18:46 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  relation &quot;area_fakultas&quot; does not exist
+LINE 2: FROM &quot;area_fakultas&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;area_fakultas&quot; does not exist
+LINE 2: FROM &quot;area_fakultas&quot;
+             ^', 'D:\\xampp\\htdocs\\ci4-kos\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'SELECT *
+FROM "area_fakultas"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "area_fakultas"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "area_fakultas"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "area_fakultas"', [], false)
+ 6 APPPATH\Models\Model_Fakultas.php(10): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Fakultas.php(26): App\Models\Model_Fakultas->getAllData()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 16:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:20:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 16:21:17 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = '4'
+              ^ in D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 187)
+#1 D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'SELECT *\nFROM "...')
+#2 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 D:\xampp\htdocs\ci4-kos\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 D:\xampp\htdocs\ci4-kos\app\Models\Model_Fakultas.php(18): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\ci4-kos\app\Controllers\Fakultas.php(88): App\Models\Model_Fakultas->detailFakultas('4')
+#7 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('4')
+#8 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+#9 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\ci4-kos\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-19 16:21:17 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = '4'
+              ^
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = :id_fakultas:', [...], false)
+ 2 APPPATH\Models\Model_Fakultas.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Fakultas.php(88): App\Models\Model_Fakultas->detailFakultas('4')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('4')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:21:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = '4'
+              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'4\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'4\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = :id_fakultas:', [...], false)
+ 4 APPPATH\Models\Model_Fakultas.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Fakultas.php(88): App\Models\Model_Fakultas->detailFakultas('4')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:21:17 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = '4'
+              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = \'4\'
+              ^', 'D:\\xampp\\htdocs\\ci4-kos\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'4\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'4\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'4\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = :id_fakultas:', [...], false)
+ 6 APPPATH\Models\Model_Fakultas.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Fakultas.php(88): App\Models\Model_Fakultas->detailFakultas('4')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('4')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 16:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 16:22:28 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = '4'
+              ^ in D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 187)
+#1 D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'SELECT *\nFROM "...')
+#2 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 D:\xampp\htdocs\ci4-kos\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 D:\xampp\htdocs\ci4-kos\app\Models\Model_Fakultas.php(18): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\ci4-kos\app\Controllers\Fakultas.php(88): App\Models\Model_Fakultas->detailFakultas('4')
+#7 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('4')
+#8 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+#9 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\ci4-kos\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-19 16:22:28 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = '4'
+              ^
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = :id_fakultas:', [...], false)
+ 2 APPPATH\Models\Model_Fakultas.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Fakultas.php(88): App\Models\Model_Fakultas->detailFakultas('4')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('4')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:22:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = '4'
+              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'4\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'4\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = :id_fakultas:', [...], false)
+ 4 APPPATH\Models\Model_Fakultas.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Fakultas.php(88): App\Models\Model_Fakultas->detailFakultas('4')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:22:28 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = '4'
+              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = \'4\'
+              ^', 'D:\\xampp\\htdocs\\ci4-kos\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'4\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'4\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'4\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = :id_fakultas:', [...], false)
+ 6 APPPATH\Models\Model_Fakultas.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Fakultas.php(88): App\Models\Model_Fakultas->detailFakultas('4')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('4')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 16:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 16:22:39 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = '8'
+              ^ in D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 187)
+#1 D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'SELECT *\nFROM "...')
+#2 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 D:\xampp\htdocs\ci4-kos\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 D:\xampp\htdocs\ci4-kos\app\Models\Model_Fakultas.php(18): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\ci4-kos\app\Controllers\Fakultas.php(88): App\Models\Model_Fakultas->detailFakultas('8')
+#7 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('8')
+#8 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+#9 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\ci4-kos\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-19 16:22:39 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = '8'
+              ^
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = :id_fakultas:', [...], false)
+ 2 APPPATH\Models\Model_Fakultas.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Fakultas.php(88): App\Models\Model_Fakultas->detailFakultas('8')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:22:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = '8'
+              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'8\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'8\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = :id_fakultas:', [...], false)
+ 4 APPPATH\Models\Model_Fakultas.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Fakultas.php(88): App\Models\Model_Fakultas->detailFakultas('8')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:22:39 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = '8'
+              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 3: WHERE &quot;id_fakultas&quot; = \'8\'
+              ^', 'D:\\xampp\\htdocs\\ci4-kos\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'8\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'8\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = \'8\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tbl_fakultas"
+WHERE "id_fakultas" = :id_fakultas:', [...], false)
+ 6 APPPATH\Models\Model_Fakultas.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Fakultas.php(88): App\Models\Model_Fakultas->detailFakultas('8')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('8')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 16:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 16:23:21 --> ErrorException: Undefined array key "id_fakultas"
+in APPPATH\Views\admin\pages\fakultas\edit_fakultas.php on line 28.
+ 1 APPPATH\Views\admin\pages\fakultas\edit_fakultas.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_fakultas"', 'D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas\\edit_fakultas.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\pages\\fakultas\\edit_fakultas.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/fakultas/edit_fakultas', [], true)
+ 5 APPPATH\Views\admin\layout\template.php(125): view('admin/pages/fakultas/edit_fakultas')
+ 6 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 9 APPPATH\Controllers\Fakultas.php(91): view('admin/layout/template', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->edit_fakultas('8')
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 16:24:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 16:24:58 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 161: WHERE &quot;id_fakultas&quot; = '8'
+                ^ in D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 187)
+#1 D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'UPDATE "tbl_fak...')
+#2 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tbl_fak...')
+#3 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tbl_fak...')
+#4 D:\xampp\htdocs\ci4-kos\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_fak...', Array, false)
+#5 D:\xampp\htdocs\ci4-kos\app\Models\Model_Fakultas.php(22): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 D:\xampp\htdocs\ci4-kos\app\Controllers\Fakultas.php(100): App\Models\Model_Fakultas->updateData('8', Array)
+#7 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(941): App\Controllers\Fakultas->update_fakultas('8')
+#8 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+#9 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\ci4-kos\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-19 16:24:58 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 161: WHERE &quot;id_fakultas&quot; = '8'
+                ^
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_fakultas" SET "fakultas_nama" = :fakultas_nama:, "fakultas_warna" = :fakultas_warna:, "fakultas_geojson" = :fakultas_geojson:
+WHERE "id_fakultas" = :id_fakultas:', [...], false)
+ 2 APPPATH\Models\Model_Fakultas.php(22): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\Fakultas.php(100): App\Models\Model_Fakultas->updateData('8', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->update_fakultas('8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:24:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 161: WHERE &quot;id_fakultas&quot; = '8'
+                ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi edit\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "id_fakultas" = \'8\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi edit\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "id_fakultas" = \'8\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_fakultas" SET "fakultas_nama" = :fakultas_nama:, "fakultas_warna" = :fakultas_warna:, "fakultas_geojson" = :fakultas_geojson:
+WHERE "id_fakultas" = :id_fakultas:', [...], false)
+ 4 APPPATH\Models\Model_Fakultas.php(22): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\Fakultas.php(100): App\Models\Model_Fakultas->updateData('8', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->update_fakultas('8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:24:58 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 161: WHERE &quot;id_fakultas&quot; = '8'
+                ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;id_fakultas&quot; does not exist
+LINE 161: WHERE &quot;id_fakultas&quot; = \'8\'
+                ^', 'D:\\xampp\\htdocs\\ci4-kos\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi edit\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "id_fakultas" = \'8\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi edit\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "id_fakultas" = \'8\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi edit\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "id_fakultas" = \'8\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_fakultas" SET "fakultas_nama" = :fakultas_nama:, "fakultas_warna" = :fakultas_warna:, "fakultas_geojson" = :fakultas_geojson:
+WHERE "id_fakultas" = :id_fakultas:', [...], false)
+ 6 APPPATH\Models\Model_Fakultas.php(22): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 APPPATH\Controllers\Fakultas.php(100): App\Models\Model_Fakultas->updateData('8', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->update_fakultas('8')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 16:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 16:25:30 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;fakultas$fakultas_id&quot; does not exist
+LINE 161: WHERE &quot;fakultas$fakultas_id&quot; = '8'
+                ^ in D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 187)
+#1 D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'UPDATE "tbl_fak...')
+#2 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tbl_fak...')
+#3 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tbl_fak...')
+#4 D:\xampp\htdocs\ci4-kos\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_fak...', Array, false)
+#5 D:\xampp\htdocs\ci4-kos\app\Models\Model_Fakultas.php(22): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 D:\xampp\htdocs\ci4-kos\app\Controllers\Fakultas.php(100): App\Models\Model_Fakultas->updateData('8', Array)
+#7 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(941): App\Controllers\Fakultas->update_fakultas('8')
+#8 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+#9 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\ci4-kos\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-19 16:25:30 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;fakultas$fakultas_id&quot; does not exist
+LINE 161: WHERE &quot;fakultas$fakultas_id&quot; = '8'
+                ^
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_fakultas" SET "fakultas_nama" = :fakultas_nama:, "fakultas_warna" = :fakultas_warna:, "fakultas_geojson" = :fakultas_geojson:
+WHERE "fakultas$fakultas_id" = :fakultas$fakultas_id:', [...], false)
+ 2 APPPATH\Models\Model_Fakultas.php(22): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\Fakultas.php(100): App\Models\Model_Fakultas->updateData('8', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->update_fakultas('8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:25:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;fakultas$fakultas_id&quot; does not exist
+LINE 161: WHERE &quot;fakultas$fakultas_id&quot; = '8'
+                ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi edit\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "fakultas$fakultas_id" = \'8\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi edit\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "fakultas$fakultas_id" = \'8\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_fakultas" SET "fakultas_nama" = :fakultas_nama:, "fakultas_warna" = :fakultas_warna:, "fakultas_geojson" = :fakultas_geojson:
+WHERE "fakultas$fakultas_id" = :fakultas$fakultas_id:', [...], false)
+ 4 APPPATH\Models\Model_Fakultas.php(22): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\Fakultas.php(100): App\Models\Model_Fakultas->updateData('8', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->update_fakultas('8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:25:30 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;fakultas$fakultas_id&quot; does not exist
+LINE 161: WHERE &quot;fakultas$fakultas_id&quot; = '8'
+                ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;fakultas$fakultas_id&quot; does not exist
+LINE 161: WHERE &quot;fakultas$fakultas_id&quot; = \'8\'
+                ^', 'D:\\xampp\\htdocs\\ci4-kos\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi edit\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "fakultas$fakultas_id" = \'8\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi edit\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "fakultas$fakultas_id" = \'8\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi edit\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "fakultas$fakultas_id" = \'8\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_fakultas" SET "fakultas_nama" = :fakultas_nama:, "fakultas_warna" = :fakultas_warna:, "fakultas_geojson" = :fakultas_geojson:
+WHERE "fakultas$fakultas_id" = :fakultas$fakultas_id:', [...], false)
+ 6 APPPATH\Models\Model_Fakultas.php(22): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 APPPATH\Controllers\Fakultas.php(100): App\Models\Model_Fakultas->updateData('8', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->update_fakultas('8')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 16:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-19 16:25:36 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;fakultas$fakultas_id&quot; does not exist
+LINE 161: WHERE &quot;fakultas$fakultas_id&quot; = '8'
+                ^ in D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 187)
+#1 D:\xampp\htdocs\ci4-kos\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'UPDATE "tbl_fak...')
+#2 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tbl_fak...')
+#3 D:\xampp\htdocs\ci4-kos\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tbl_fak...')
+#4 D:\xampp\htdocs\ci4-kos\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_fak...', Array, false)
+#5 D:\xampp\htdocs\ci4-kos\app\Models\Model_Fakultas.php(22): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 D:\xampp\htdocs\ci4-kos\app\Controllers\Fakultas.php(100): App\Models\Model_Fakultas->updateData('8', Array)
+#7 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(941): App\Controllers\Fakultas->update_fakultas('8')
+#8 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+#9 D:\xampp\htdocs\ci4-kos\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\ci4-kos\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-19 16:25:36 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;fakultas$fakultas_id&quot; does not exist
+LINE 161: WHERE &quot;fakultas$fakultas_id&quot; = '8'
+                ^
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_fakultas" SET "fakultas_nama" = :fakultas_nama:, "fakultas_warna" = :fakultas_warna:, "fakultas_geojson" = :fakultas_geojson:
+WHERE "fakultas$fakultas_id" = :fakultas$fakultas_id:', [...], false)
+ 2 APPPATH\Models\Model_Fakultas.php(22): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\Fakultas.php(100): App\Models\Model_Fakultas->updateData('8', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->update_fakultas('8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:25:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column &quot;fakultas$fakultas_id&quot; does not exist
+LINE 161: WHERE &quot;fakultas$fakultas_id&quot; = '8'
+                ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi coba\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "fakultas$fakultas_id" = \'8\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi coba\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "fakultas$fakultas_id" = \'8\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_fakultas" SET "fakultas_nama" = :fakultas_nama:, "fakultas_warna" = :fakultas_warna:, "fakultas_geojson" = :fakultas_geojson:
+WHERE "fakultas$fakultas_id" = :fakultas$fakultas_id:', [...], false)
+ 4 APPPATH\Models\Model_Fakultas.php(22): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\Fakultas.php(100): App\Models\Model_Fakultas->updateData('8', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->update_fakultas('8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-19 16:25:36 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column &quot;fakultas$fakultas_id&quot; does not exist
+LINE 161: WHERE &quot;fakultas$fakultas_id&quot; = '8'
+                ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;fakultas$fakultas_id&quot; does not exist
+LINE 161: WHERE &quot;fakultas$fakultas_id&quot; = \'8\'
+                ^', 'D:\\xampp\\htdocs\\ci4-kos\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi coba\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "fakultas$fakultas_id" = \'8\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi coba\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "fakultas$fakultas_id" = \'8\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tbl_fakultas" SET "fakultas_nama" = \'Fakultas Biologi coba\', "fakultas_warna" = \'#FF8E8F\', "fakultas_geojson" = \'{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ],
+            [
+              109.25354929324186,
+              -7.409005338705029
+            ],
+            [
+              109.25358280893715,
+              -7.409072858455943
+            ],
+            [
+              109.25362804081004,
+              -7.409177687995069
+            ],
+            [
+              109.25372665221676,
+              -7.409448213873503
+            ],
+            [
+              109.25379303574033,
+              -7.409642256605821
+            ],
+            [
+              109.25384916042555,
+              -7.409811450852871
+            ],
+            [
+              109.25390321167902,
+              -7.409969000904468
+            ],
+            [
+              109.25392940319739,
+              -7.410078828674713
+            ],
+            [
+              109.25419797905289,
+              -7.410047240606502
+            ],
+            [
+              109.25429691027222,
+              -7.410042565163593
+            ],
+            [
+              109.25449101453313,
+              -7.410033213752371
+            ],
+            [
+              109.25478354343159,
+              -7.410017628264669
+            ],
+            [
+              109.25500604919921,
+              -7.410000716678383
+            ],
+            [
+              109.25530736747163,
+              -7.409970523201125
+            ],
+            [
+              109.2555993952148,
+              -7.409955072481409
+            ],
+            [
+              109.25559184025536,
+              -7.409933552765949
+            ],
+            [
+              109.25552340891801,
+              -7.409601971556057
+            ],
+            [
+              109.2554826669051,
+              -7.409408321059345
+            ],
+            [
+              109.25541687504494,
+              -7.409096920388464
+            ],
+            [
+              109.25535927081955,
+              -7.4088322092859755
+            ],
+            [
+              109.25532937732504,
+              -7.408692785111583
+            ],
+            [
+              109.25529712545057,
+              -7.408544260153235
+            ],
+            [
+              109.25528119886673,
+              -7.408474316939646
+            ],
+            [
+              109.25507909590505,
+              -7.408529134168489
+            ],
+            [
+              109.25485518284808,
+              -7.4085921186232895
+            ],
+            [
+              109.25475621050646,
+              -7.408620321525547
+            ],
+            [
+              109.25468467867478,
+              -7.408647259174387
+            ],
+            [
+              109.25420612706142,
+              -7.408766153054316
+            ],
+            [
+              109.25411704346658,
+              -7.408790439600665
+            ],
+            [
+              109.254046369803,
+              -7.4088097735676115
+            ],
+            [
+              109.25394756733056,
+              -7.408836954760218
+            ],
+            [
+              109.25385821074553,
+              -7.408861144595875
+            ],
+            [
+              109.25376674407818,
+              -7.408886035590015
+            ],
+            [
+              109.25368417476506,
+              -7.408908645858787
+            ],
+            [
+              109.25352461473238,
+              -7.4089556111215416
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    }
+  ]
+}\'
+WHERE "fakultas$fakultas_id" = \'8\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_fakultas" SET "fakultas_nama" = :fakultas_nama:, "fakultas_warna" = :fakultas_warna:, "fakultas_geojson" = :fakultas_geojson:
+WHERE "fakultas$fakultas_id" = :fakultas$fakultas_id:', [...], false)
+ 6 APPPATH\Models\Model_Fakultas.php(22): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 APPPATH\Controllers\Fakultas.php(100): App\Models\Model_Fakultas->updateData('8', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Fakultas->update_fakultas('8')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fakultas))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 16:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:26:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:26:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:26:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:28:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:28:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-19 16:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-19 16:29:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/pages/kos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/kos.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/pages/kos', [], true)
+ 3 APPPATH\Views\admin\layout\template.php(125): view('admin/pages/kos')
+ 4 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\ci4-kos\\app\\Views\\admin\\layout\\template.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 7 APPPATH\Controllers\Admin.php(44): view('admin/layout/template', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->kos()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-19 16:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

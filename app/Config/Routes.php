@@ -14,7 +14,7 @@ $routes->get('/logout', 'Auth::logout');
 
 $routes->get('/admin', 'Admin::index');
 $routes->get('/admin/profile', 'Admin::profile');
-$routes->get('/admin/kos', 'Admin::kos');
+$routes->get('/admin/kos', 'Kos::index');
 $routes->get('/admin/kamar', 'Admin::kamar');
 $routes->get('/admin/fasilitas', 'Admin::fasilitas');
 $routes->get('/admin/penyewaan', 'Admin::penyewaan');

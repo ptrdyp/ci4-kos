@@ -44,7 +44,7 @@
                     <th>No</th>
                     <th>Nama Fakultas</th>
                     <th>Warna</th>
-                    <th class="text-center">Gambar</th>
+                    <th class="text-center">gambar</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -53,16 +53,16 @@
                 foreach($fakultas as $key => $value) : ?>
                     <tr>
                         <td><?= $no++ ?></td>
-                        <td><?= $value['nama_fakultas']; ?></td>
-                        <td style="background-color: <?= $value['warna']; ?>;"></td>
+                        <td><?= $value['fakultas_nama']; ?></td>
+                        <td style="background-color: <?= $value['fakultas_warna']; ?>;"></td>
                         <td class="text-center">
-                            <img src="<?= !empty($value['gambar']) ? $value['gambar'] : base_url().'img/default-view.jpeg'; ?>">
+                            <img src="<?= !empty($value['fakultas_gambar']) ? $value['fakultas_gambar'] : base_url().'img/default-view.jpeg'; ?>">
                         </td>
                         <td>
-                            <a href="<?= base_url('admin/edit-fakultas/' . $value['id_fakultas']) ?>">
+                            <a href="<?= base_url('admin/edit-fakultas/' . $value['fakultas_id']) ?>">
                                 <button type="button" class="btn btn-border-warning">Ubah</button>
                             </a>
-                            <a href="<?= base_url('admin/delete-fakultas/' . $value['id_fakultas']) ?>">
+                            <a href="<?= base_url('admin/delete-fakultas/' . $value['fakultas_id']) ?>">
                                 <button type="button" class="btn btn-border-danger">Hapus</button>
                             </a>
                         </td>
@@ -85,13 +85,13 @@
     }).addTo(map);
 
     <?php foreach ($fakultas as $key => $value) { ?>
-        L.geoJSON(<?= $value['geojson']; ?>, {
-            fillColor: '<?= $value['warna']; ?>',
-            color: '<?= $value['warna']; ?>',
+        L.geoJSON(<?= $value['fakultas_geojson']; ?>, {
+            fillColor: '<?= $value['fakultas_warna']; ?>',
+            color: '<?= $value['fakultas_warna']; ?>',
             fillOpacity: 0.2,
             weight: 2,
         })
-        .bindPopup("<?= $value['nama_fakultas']; ?>")
+        .bindPopup("<?= $value['fakultas_nama']; ?>")
         .addTo(map);
     <?php } ?>
 

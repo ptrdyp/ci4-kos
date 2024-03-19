@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\Model_Fakultas;
 use App\Models\Model_Setting;
 
-class Fakultas extends BaseController
+class Kos extends BaseController
 {
 
     protected $Model_Fakultas;
@@ -21,7 +21,7 @@ class Fakultas extends BaseController
         $uri = service('uri');
         $data = [
             'judul' => 'Data Fakultas',
-            'page' => 'admin/pages/fakultas/index',
+            'page' => 'admin/pages/kos/index',
             'setting' => $this -> Model_Setting -> getData(),
             'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'active' => $uri->getSegment(2)
@@ -43,21 +43,21 @@ class Fakultas extends BaseController
 
     public function save_fakultas() {
         if ($this -> validate ([
-            'fakultas_nama' => [
+            'nama_fakultas' => [
                 'label' => 'Nama Fakultas',
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} harus diisi'
                 ]
             ],
-            'fakultas_geojson' => [
+            'geojson' => [
                 'label' => 'Geojson',
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} harus diisi'
                 ]
             ],
-            'fakultas_warna' => [
+            'warna' => [
                 'label' => 'Warna',
                 'rules' => 'required',
                 'errors' => [
@@ -66,9 +66,9 @@ class Fakultas extends BaseController
             ],
         ])) {
             $data = array (
-                'fakultas_nama' => $this -> request -> getPost('fakultas_nama'),
-                'fakultas_geojson' => $this -> request -> getPost('fakultas_geojson'),
-                'fakultas_warna' => $this -> request -> getPost('fakultas_warna'),
+                'nama_fakultas' => $this -> request -> getPost('nama_fakultas'),
+                'geojson' => $this -> request -> getPost('geojson'),
+                'warna' => $this -> request -> getPost('warna'),
             );
             $this -> Model_Fakultas -> saveFakultas($data);
             session() -> setFlashdata('pesan', 'Data berhasil ditambahkan');
@@ -79,31 +79,31 @@ class Fakultas extends BaseController
         }
     }
 
-    public function edit_fakultas($fakultas_id) {
+    public function edit_fakultas($id_fakultas) {
         $uri = service('uri');
         $data = [
             'judul' => 'Tambah Data Fakultas',
             'page' => 'admin/pages/fakultas/edit_fakultas',
             'setting' => $this -> Model_Setting -> getData(),
-            'fakultas' => $this -> Model_Fakultas -> detailFakultas($fakultas_id),
+            'fakultas' => $this -> Model_Fakultas -> detailFakultas($id_fakultas),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);
     }
 
-    public function update_fakultas($fakultas_id) {
+    public function update_fakultas($id_fakultas) {
         $data = [
-            'fakultas_nama' => $this->request->getPost('fakultas_nama'),
-            'fakultas_warna' => $this->request->getPost('fakultas_warna'),
-            'fakultas_geojson' => $this->request->getPost('fakultas_geojson'),
+            'nama_fakultas' => $this->request->getPost('nama_fakultas'),
+            'warna' => $this->request->getPost('warna'),
+            'geojson' => $this->request->getPost('geojson'),
         ];
-        $this -> Model_Fakultas -> updateData($fakultas_id, $data);
+        $this -> Model_Fakultas -> updateData($id_fakultas, $data);
         session() -> setFlashdata('pesan', 'Data Fakultas berhasil diperbarui !');
         return redirect() -> to('admin/fakultas');
     }   
     
-    public function delete_fakultas($fakultas_id) {
-        $this -> Model_Fakultas -> deleteData($fakultas_id);
+    public function delete_fakultas($id_fakultas) {
+        $this -> Model_Fakultas -> deleteData($id_fakultas);
         session() -> setFlashdata('pesan', 'Data Fakultas berhasil dihapus !');
         return redirect() -> to('admin/fakultas');
     }

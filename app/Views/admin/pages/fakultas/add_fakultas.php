@@ -28,23 +28,23 @@
         <?php echo form_open('admin/save-fakultas'); ?>
             <div class="row">
                 <div class="col">
-                    <label for="nama_fakultas">Nama Fakultas</label>
+                    <label for="fakultas_nama">Nama Fakultas</label>
                     <div class="custome-input">
-                        <input type="text" value="<?= old('nama_fakultas') ?>" name="nama_fakultas" placeholder="Fakultas Teknik" autocomplete="off">
+                        <input type="text" value="<?= old('fakultas_nama') ?>" name="fakultas_nama" placeholder="Fakultas Teknik" autocomplete="off">
                     </div>
                 </div>
                 <div class="col">
-                    <label for="warna">Warna</label>
+                    <label for="fakultas_warna">Warna</label>
                     <div class="custome-input">
-                        <input type="text" value="<?= old('warna') ?>" name="warna" placeholder="#fecdd3" autocomplete="off">
+                        <input type="text" value="<?= old('fakultas_warna') ?>" name="fakultas_warna" placeholder="#fecdd3" autocomplete="off">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <label for="geojson">Geojson</label>
+                    <label for="fakultas_geojson">Geojson</label>
                     <div class="custome-input">
-                        <textarea value="<?= old('geojson') ?>" name="geojson" autocomplete="off"></textarea>
+                        <textarea value="<?= old('fakultas_geojson') ?>" name="fakultas_geojson" autocomplete="off"></textarea>
                     </div>
                 </div>
             </div>
