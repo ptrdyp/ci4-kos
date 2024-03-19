@@ -37,7 +37,7 @@ class Setting extends BaseController
             'coordinat' => $this->request->getPost('coordinat'),
             'zoom_view' => $this->request->getPost('zoom_view'),
         ];
-        $this -> Model_Setting -> UpdateData($data);
+        $this -> Model_Setting -> updateData($data);
         session() -> setFlashdata('pesan', 'Pengaturan Website berhasil diperbarui !');
         return redirect() -> to('admin/setting');
     }

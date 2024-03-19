@@ -55,16 +55,12 @@ toggler.addEventListener("change", function () {
   }
 });
 
-const toggleButton = document.getElementById("toggleAddButton");
-const addElement = document.querySelector(".add");
-const closeAddView = document.querySelector(".add-close");
+window.setTimeout(function(){
+  var taskList = document.querySelector(".task-list");
+  taskList.style.transition = "opacity 0.5s linear 0s";
+  taskList.style.opacity = 0;
 
-toggleButton.addEventListener("click", () => {
-  console.log("click");
-  addElement.style.display = "block";
-});
-
-closeAddView.addEventListener("click", () => {
-  console.log("click close");
-  addElement.style.display = "none";
-});
+  window.setTimeout(function(){
+      taskList.style.display = 'none';
+  }, 500);
+}, 3000);

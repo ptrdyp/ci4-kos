@@ -12,32 +12,32 @@
         </div>
 
         <?php 
-    function displayMessage($type, $message) {
-        echo '
-        <div class="row">
-            <div class="col">
-                <ul class="task-list">
-                    <li class="'.$type.'">
-                        <div class="task-title">
-        ';
-        echo session() -> getFlashdata($message);
-        echo '
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        ';
-    }
+            function displayMessage($type, $message) {
+                echo '
+                <div class="row">
+                    <div class="col">
+                        <ul class="task-list">
+                            <li class="'.$type.'">
+                                <div class="task-title">
+                ';
+                echo session() -> getFlashdata($message);
+                echo '
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                ';
+            }
 
-    if (session() -> getFlashdata('pesan')) {
-        displayMessage('completed', 'pesan');
-    }
+            if (session() -> getFlashdata('pesan')) {
+                displayMessage('completed', 'pesan');
+            }
 
-    if (session() -> getFlashdata('error')) {
-        displayMessage('not-completed', 'error');
-    }
-    ?>
+            if (session() -> getFlashdata('error')) {
+                displayMessage('not-completed', 'error');
+            }
+        ?>
 
         <?php echo form_open('admin/update-setting'); ?>
         <div class="row">
@@ -77,3 +77,15 @@
         <?php echo form_close(); ?>
     </div>
 </div>
+
+<script>
+    var coordinates = "<?php echo $setting['coordinat']; ?>".split(',').map(Number);
+    var map = L.map('map', {
+        center: coordinates,
+        zoom: <?php echo $setting['zoom_view']; ?>
+    });
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+</script>

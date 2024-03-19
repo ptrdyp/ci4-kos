@@ -10,7 +10,7 @@ class Model_Setting extends Model
         return $this->db->table('setting') -> where('id', 1) -> get() -> getRowArray(); 
     }
 
-    public function UpdateData($data) {
+    public function updateData($data) {
         $this -> db -> table('setting') -> where('id', 1) -> update($data);
     }
     

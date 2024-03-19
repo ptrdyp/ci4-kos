@@ -24,6 +24,10 @@ $routes->get('/admin/setting', 'Setting::index');
 $routes->post('/admin/update-setting', 'Setting::update_setting');
 
 $routes->get('/admin/fakultas', 'Fakultas::index');
-$routes->post('/admin/insert-fakultas', 'Admin::insert_fakultas');
+$routes->get('/admin/add-fakultas', 'Fakultas::add_fakultas');
+$routes->post('/admin/save-fakultas', 'Fakultas::save_fakultas');
+$routes->get('/admin/edit-fakultas/(:any)', 'Fakultas::edit_fakultas/$1');
+$routes->post('/admin/edit-fakultas/(:any)', 'Fakultas::update_fakultas/$1');
+$routes->get('/admin/delete-fakultas/(:any)', 'Fakultas::delete_fakultas/$1');
 
 $routes->get('/', 'User::index');
