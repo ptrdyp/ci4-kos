@@ -14,11 +14,14 @@ $routes->get('/logout', 'Auth::logout');
 
 $routes->get('/admin', 'Admin::index');
 $routes->get('/admin/profile', 'Admin::profile');
-$routes->get('/admin/kos', 'Kos::index');
 $routes->get('/admin/kamar', 'Admin::kamar');
 $routes->get('/admin/fasilitas', 'Admin::fasilitas');
 $routes->get('/admin/penyewaan', 'Admin::penyewaan');
 $routes->get('/admin/akun-admin', 'Admin::akun_admin');
+
+$routes->get('/admin/kos', 'Kos::index');
+$routes->get('/admin/add-kos', 'Kos::add_kos');
+$routes->post('/admin/save-kos', 'Kos::save_kos');
 
 $routes->get('/admin/setting', 'Setting::index');
 $routes->post('/admin/update-setting', 'Setting::update_setting');

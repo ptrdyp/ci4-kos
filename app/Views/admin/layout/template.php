@@ -9,6 +9,7 @@
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
@@ -19,7 +20,7 @@
     <div class="sidebar">
       <a href="#" class="logo">
         <i class="bx bx-home-smile"></i>
-        <div class="logo-name"><span><?= $setting['nama_web_depan'] ?></span><?= $setting['nama_web_belakang'] ?></div>
+        <div class="logo-name"><span><?= $setting['setting_nama_web_depan'] ?></span><?= $setting['setting_nama_web_belakang'] ?></div>
       </a>
 
       <ul class="side-menu">

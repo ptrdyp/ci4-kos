@@ -31,11 +31,11 @@ class Setting extends BaseController
 
     public function update_setting() {
         $data = [
-            'id' => 1,
-            'nama_web_depan' => $this->request->getPost('nama_web_depan'),
-            'nama_web_belakang' => $this->request->getPost('nama_web_belakang'),
-            'coordinat' => $this->request->getPost('coordinat'),
-            'zoom_view' => $this->request->getPost('zoom_view'),
+            'setting_id' => 1,
+            'setting_nama_web_depan' => $this->request->getPost('setting_nama_web_depan'),
+            'setting_nama_web_belakang' => $this->request->getPost('setting_nama_web_belakang'),
+            'setting_coordinat' => $this->request->getPost('setting_coordinat'),
+            'setting_zoom_view' => $this->request->getPost('setting_zoom_view'),
         ];
         $this -> Model_Setting -> updateData($data);
         session() -> setFlashdata('pesan', 'Pengaturan Website berhasil diperbarui !');

@@ -1,1 +1,0 @@
-__ci_last_regenerate|i:1710683151;_ci_previous_url|s:60:"http://localhost/ci4-kos/public/index.php/admin/add-fakultas";log|b:1;nama|s:5:"Putri";email|s:11:"a@gmail.com";no_hp|N;level|s:1:"1";foto|N;level_name|s:11:"super admin";errors|a:2:{s:7:"geojson";s:19:"Geojson harus diisi";s:5:"warna";s:17:"Warna harus diisi";}__ci_vars|a:1:{s:6:"errors";s:3:"old";}

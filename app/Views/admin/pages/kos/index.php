@@ -1,54 +1,84 @@
-<div class="bottom-data">
-    <div class="orders">
+<div class="card-row">
+    <div class="card-col">
+        <div id="map" style="width: 100%; height: 50vh;"></div>
+    </div>
+</div>
+
+<div class="card-row">
+    <div class="card-col">
         <div class="header">
-            <i class="bx bx-home-alt-2"></i>
-            <h3><?= $judul ?></h3>
+            <i class='bx bx-receipt'></i>
+            <h3>Kos</h3>
+            <a href="<?= base_url('admin/add-kos') ?>">
+                <button class="btn btn-border-success">Tambah Data</button>
+            </a>
             <i class='bx bx-filter'></i>
             <i class='bx bx-search'></i>
         </div>
+        <?php 
+            function displayMessage($type, $message) {
+                echo '
+                        <ul class="task-list">
+                            <li class="'.$type.'">
+                                <div class="task-title">
+                ';
+                echo session() -> getFlashdata($message);
+                echo '
+                                </div>
+                            </li>
+                        </ul>
+                ';
+            }
+
+            if (session() -> getFlashdata('pesan')) {
+                displayMessage('completed', 'pesan');
+            }
+
+            if (session() -> getFlashdata('error')) {
+                displayMessage('not-completed', 'error');
+            }
+        ?>
         <table>
             <thead>
                 <tr>
-                    <th>Nama Kos</th>
-                    <th>Jenis Kos</th>
-                    <th>Terakhir Diperbarui</th>
-                    <th>Status</th>
+                    <th>No</th>
+                    <th>Nama kos</th>
+                    <th>Jenis kos</th>
                     <th>Aksi</th>
-                    <!-- Detail -> Fasilitas Kos -->
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        <img src="images/profile-1.jpg">
-                        <p>John Doe</p>
-                    </td>
-                    <td></td>
-                    <td>14-08-2023</td>
-                    <td><span class="status completed">Completed</span></td>
-                    <td>Detail || Lihat Kamar</td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="images/profile-1.jpg">
-                        <p>John Doe</p>
-                    </td>
-                    <td></td>
-                    <td>14-08-2023</td>
-                    <td><span class="status pending">Pending</span></td>
-                    <td>Detail || Lihat Kamar</td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="images/profile-1.jpg">
-                        <p>John Doe</p>
-                    </td>
-                    <td></td>
-                    <td>14-08-2023</td>
-                    <td><span class="status process">Processing</span></td>
-                    <td>Detail || Lihat Kamar</td>
-                </tr>
+                <?php $no = 1; 
+                foreach($kos as $key => $value) : ?>
+                    <tr>
+                        <td><?= $no++ ?></td>
+                        <td><?= $value['kos_nama']; ?></td>
+                        <td><?= $value['kos_jenis']; ?></td>
+                        <td>
+                            <a href="<?= base_url('admin/edit-kos/' . $value['kos_id']) ?>">
+                                <button type="button" class="btn btn-border-warning">Ubah</button>
+                            </a>
+                            <a href="<?= base_url('admin/delete-kos/' . $value['kos_id']) ?>">
+                                <button type="button" class="btn btn-border-danger">Hapus</button>
+                            </a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
-</div>  
+</div>
+
+<script>
+    var coordinates = "<?php echo $setting['setting_coordinat']; ?>".split(',').map(Number);
+    var map = L.map('map', {
+        center: coordinates,
+        zoom: <?php echo $setting['setting_zoom_view']; ?>
+    });
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+
+</script>

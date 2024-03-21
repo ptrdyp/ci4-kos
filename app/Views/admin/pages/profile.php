@@ -62,7 +62,11 @@
             </div>
         </div>
 
-        <button class="login">Ubah data</button>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary">Ubah data</button>
+            </div>
+        </div>
         <?php echo form_close(); ?>
     </div>
 </div>

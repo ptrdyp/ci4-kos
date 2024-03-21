@@ -49,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row mt-12">
                 <div class="col col-btn">
                     <a href="<?= base_url('admin/fakultas') ?>">
                         <button type="button" class="btn btn-border-success">Kembali</button>

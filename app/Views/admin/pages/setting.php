@@ -44,27 +44,27 @@
             <div class="col">
                 <label for="nama">Nama Website</label>
                 <div class="custome-input">
-                    <input type="text" name="nama_web_depan" placeholder="Soedir" autocomplete="off" value="<?= $setting['nama_web_depan'] ?>">
+                    <input type="text" name="setting_nama_web_depan" placeholder="Soedir" autocomplete="off" value="<?= $setting['setting_nama_web_depan'] ?>">
                 </div>
             </div>
             <div class="col">
                 <label for="nama">Nama Belakang</label>
                 <div class="custome-input">
-                    <input type="text" name="nama_web_belakang" placeholder="Kost" autocomplete="off" value="<?= $setting['nama_web_belakang'] ?>">
+                    <input type="text" name="setting_nama_web_belakang" placeholder="Kost" autocomplete="off" value="<?= $setting['setting_nama_web_belakang'] ?>">
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <label for="coordinat">Koordinat</label>
+                <label for="setting_coordinat">Koordinat</label>
                 <div class="custome-input">
-                    <input type="text" name="coordinat" placeholder="-7.403900991147349, 109.24633745767005" autocomplete="off" value="<?= $setting['coordinat'] ?>">
+                    <input type="text" name="setting_coordinat" placeholder="-7.403900991147349, 109.24633745767005" autocomplete="off" value="<?= $setting['setting_coordinat'] ?>">
                 </div>
             </div>
             <div class="col">
-                <label for="zoom_view">Zoom View</label>
+                <label for="setting_zoom_view">Zoom View</label>
                 <div class="custome-input">
-                    <input type="number" name="zoom_view" placeholder="12" min="0" autocomplete="off" value="<?= $setting['zoom_view'] ?>">
+                    <input type="number" name="setting_zoom_view" placeholder="12" min="0" autocomplete="off" value="<?= $setting['setting_zoom_view'] ?>">
                 </div>
             </div>
         </div>
@@ -79,10 +79,10 @@
 </div>
 
 <script>
-    var coordinates = "<?php echo $setting['coordinat']; ?>".split(',').map(Number);
+    var coordinates = "<?php echo $setting['setting_coordinat']; ?>".split(',').map(Number);
     var map = L.map('map', {
         center: coordinates,
-        zoom: <?php echo $setting['zoom_view']; ?>
+        zoom: <?php echo $setting['setting_zoom_view']; ?>
     });
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {

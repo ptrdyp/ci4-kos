@@ -2,110 +2,114 @@
 
 namespace App\Controllers;
 
-use App\Models\Model_Fakultas;
+use App\Models\Model_Kos;
 use App\Models\Model_Setting;
 
 class Kos extends BaseController
 {
 
-    protected $Model_Fakultas;
+    protected $Model_Kos;
     protected $Model_Setting;
 
     public function __construct() {
         helper('form');
         $this -> Model_Setting = new Model_Setting();
-        $this -> Model_Fakultas = new Model_Fakultas();
+        $this -> Model_Kos = new Model_Kos();
     }
 
     public function index(): string {
         $uri = service('uri');
         $data = [
-            'judul' => 'Data Fakultas',
+            'judul' => 'Data Kos',
             'page' => 'admin/pages/kos/index',
             'setting' => $this -> Model_Setting -> getData(),
-            'fakultas' => $this -> Model_Fakultas -> getAllData(),
+            'kos' => $this -> Model_Kos -> getAllData(),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);
     }
 
-    public function add_fakultas() {
+    public function add_kos() {
         $uri = service('uri');
         $data = [
-            'judul' => 'Tambah Data Fakultas',
-            'page' => 'admin/pages/fakultas/add_fakultas',
+            'judul' => 'Tambah Data Kos',
+            'page' => 'admin/pages/kos/add_kos',
             'setting' => $this -> Model_Setting -> getData(),
-            'fakultas' => $this -> Model_Fakultas -> getAllData(),
             'active' => $uri->getSegment(2)
         ];
         return view('admin/layout/template', $data);
     }
 
-    public function save_fakultas() {
+    public function save_kos() {
         if ($this -> validate ([
-            'nama_fakultas' => [
-                'label' => 'Nama Fakultas',
+            'kos_nama' => [
+                'label' => 'Nama Kos',
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} harus diisi'
                 ]
             ],
-            'geojson' => [
-                'label' => 'Geojson',
+            'kos_jenis' => [
+                'label' => 'Jenis Kos',
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} harus diisi'
                 ]
             ],
-            'warna' => [
-                'label' => 'Warna',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi'
-                ]
-            ],
+            // 'kos_deposit' => [
+            //     'label' => 'Deposit',
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => '{field} harus diisi'
+            //     ]
+            // ],
         ])) {
             $data = array (
-                'nama_fakultas' => $this -> request -> getPost('nama_fakultas'),
-                'geojson' => $this -> request -> getPost('geojson'),
-                'warna' => $this -> request -> getPost('warna'),
+                'kos_nama' => $this -> request -> getPost('kos_nama'),
+                'kos_jenis' => $this -> request -> getPost('kos_jenis'),
+                'kos_deposit' => $this -> request -> getPost('kos_deposit'),
+                'kos_waktu_sewa_terdekat' => $this -> request -> getPost('kos_waktu_sewa_terdekat'),
+                'kos_waktu_sewa_terjauh' => $this -> request -> getPost('kos_waktu_sewa_terjauh'),
+                'kos_alamat' => $this -> request -> getPost('kos_alamat'),
+                'kos_tentang' => $this -> request -> getPost('kos_tentang'),
+                'kos_coordinat' => $this -> request -> getPost('kos_coordinat'),
             );
-            $this -> Model_Fakultas -> saveFakultas($data);
+            $this -> Model_Kos -> saveKos($data);
             session() -> setFlashdata('pesan', 'Data berhasil ditambahkan');
-            return redirect() -> to('/admin/fakultas');
+            return redirect() -> to('/admin/kos');
         } else {
             session() -> setFlashdata('errors', \Config\Services::validation()->getErrors());
-            return redirect() -> to('/admin/add-fakultas') -> withInput();
+            return redirect() -> to('/admin/add-kos') -> withInput();
         }
     }
 
-    public function edit_fakultas($id_fakultas) {
-        $uri = service('uri');
-        $data = [
-            'judul' => 'Tambah Data Fakultas',
-            'page' => 'admin/pages/fakultas/edit_fakultas',
-            'setting' => $this -> Model_Setting -> getData(),
-            'fakultas' => $this -> Model_Fakultas -> detailFakultas($id_fakultas),
-            'active' => $uri->getSegment(2)
-        ];
-        return view('admin/layout/template', $data);
-    }
+    // public function edit_fakultas($id_fakultas) {
+    //     $uri = service('uri');
+    //     $data = [
+    //         'judul' => 'Tambah Data Fakultas',
+    //         'page' => 'admin/pages/fakultas/edit_fakultas',
+    //         'setting' => $this -> Model_Setting -> getData(),
+    //         'fakultas' => $this -> Model_Fakultas -> detailFakultas($id_fakultas),
+    //         'active' => $uri->getSegment(2)
+    //     ];
+    //     return view('admin/layout/template', $data);
+    // }
 
-    public function update_fakultas($id_fakultas) {
-        $data = [
-            'nama_fakultas' => $this->request->getPost('nama_fakultas'),
-            'warna' => $this->request->getPost('warna'),
-            'geojson' => $this->request->getPost('geojson'),
-        ];
-        $this -> Model_Fakultas -> updateData($id_fakultas, $data);
-        session() -> setFlashdata('pesan', 'Data Fakultas berhasil diperbarui !');
-        return redirect() -> to('admin/fakultas');
-    }   
+    // public function update_fakultas($id_fakultas) {
+    //     $data = [
+    //         'nama_fakultas' => $this->request->getPost('nama_fakultas'),
+    //         'warna' => $this->request->getPost('warna'),
+    //         'geojson' => $this->request->getPost('geojson'),
+    //     ];
+    //     $this -> Model_Fakultas -> updateData($id_fakultas, $data);
+    //     session() -> setFlashdata('pesan', 'Data Fakultas berhasil diperbarui !');
+    //     return redirect() -> to('admin/fakultas');
+    // }   
     
-    public function delete_fakultas($id_fakultas) {
-        $this -> Model_Fakultas -> deleteData($id_fakultas);
-        session() -> setFlashdata('pesan', 'Data Fakultas berhasil dihapus !');
-        return redirect() -> to('admin/fakultas');
-    }
+    // public function delete_fakultas($id_fakultas) {
+    //     $this -> Model_Fakultas -> deleteData($id_fakultas);
+    //     session() -> setFlashdata('pesan', 'Data Fakultas berhasil dihapus !');
+    //     return redirect() -> to('admin/fakultas');
+    // }
     
 }

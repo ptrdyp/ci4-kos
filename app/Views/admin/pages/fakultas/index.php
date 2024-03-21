@@ -74,10 +74,10 @@
 </div>
 
 <script>
-    var coordinates = "<?php echo $setting['coordinat']; ?>".split(',').map(Number);
+    var coordinates = "<?php echo $setting['setting_coordinat']; ?>".split(',').map(Number);
     var map = L.map('map', {
         center: coordinates,
-        zoom: <?php echo $setting['zoom_view']; ?>
+        zoom: <?php echo $setting['setting_zoom_view']; ?>
     });
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {

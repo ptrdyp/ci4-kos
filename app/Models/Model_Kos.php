@@ -7,24 +7,24 @@ class Model_Kos extends Model
 {
 
     public function getAllData() {
-        return $this->db->table('area_fakultas')->get()->getResultArray();  
+        return $this->db->table('tbl_kos')->get()->getResultArray();  
     }
 
-    public function saveFakultas($data) {
-        $this -> db -> table('area_fakultas') -> insert($data);
+    public function saveKos($data) {
+        $this -> db -> table('tbl_kos') -> insert($data);
     }
 
-    public function detailFakultas($id_fakultas) {
-        return $this -> db -> table('area_fakultas') -> where('id_fakultas', $id_fakultas) -> get() -> getRowArray();
-    }
+    // public function detailFakultas($kos_id) {
+    //     return $this -> db -> table('tbl_kos') -> where('kos_id', $kos_id) -> get() -> getRowArray();
+    // }
 
-    public function updateData($id_fakultas, $data) {
-        $this -> db -> table('area_fakultas') -> where('id_fakultas', $id_fakultas) -> update($data);
-    }
+    // public function updateData($kos_id, $data) {
+    //     $this -> db -> table('tbl_kos') -> where('kos_id', $kos_id) -> update($data);
+    // }
 
-    public function deleteData($id_fakultas) {
-        $this -> db -> table('area_fakultas') -> where('id_fakultas', $id_fakultas) -> delete();
-    }
+    // public function deleteData($kos_id) {
+    //     $this -> db -> table('tbl_kos') -> where('kos_id', $kos_id) -> delete();
+    // }
     
     
 }

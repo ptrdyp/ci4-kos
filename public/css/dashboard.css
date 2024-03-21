@@ -16,10 +16,22 @@
   --light-success: #bbf7d0;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--grey);
+}
+
 /* Basic */
 .mt-12 {
   margin-top: 12px;
 }
+
 .bx {
   font-size: 1.5rem;
 }
@@ -38,6 +50,31 @@ li {
 
 .text-center {
   text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  padding: 0 12px;
+}
+
+.flex-1{
+  flex: 1;
+}
+
+.flex-2{
+  flex: 2;
+}
+
+.flex-3{
+  flex: 3;
+}
+
+.flex-4 {
+  flex: 4;
 }
 
 .btn {
@@ -134,17 +171,6 @@ li {
 }
 
 /* Non-basic */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  background: var(--grey);
-}
 
 body.dark {
   --light: #181a1e;
@@ -682,16 +708,6 @@ nav #theme-toggle:checked + .theme-toggle::before {
   display: none;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.col {
-  flex: 1;
-  padding: 0 12px;
-}
-
 .col-btn {
   margin-top: 12px;
   text-align: end;
@@ -726,13 +742,31 @@ form .custome-input input {
   transition: all 0.3s ease;
 }
 
+select,
+input[type="text"] {
+  padding: 8px;
+  flex: 1;
+  outline: none;
+  color: var(--dark);
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  height: 46px;
+  letter-spacing: 0.03rem;
+  border: 1px solid var(--dark);
+  background: transparent;
+  border-radius: 8px;
+  text-indent: 20px;
+  margin-top: 6px;
+  transition: all 0.3s ease;
+}
+
 form .custome-input textarea {
   resize: none;
   color: var(--dark);
   font-size: 16px;
   font-weight: 500;
   width: 100%;
-  height: 156px;
   letter-spacing: 0.03rem;
   border: 1px solid var(--dark);
   background: transparent;
@@ -751,26 +785,6 @@ form .custome-input input:focus {
 
 form .custome-input textarea:focus {
   border-color: var(--secondary);
-}
-
-form .login {
-  width: 100%;
-  margin-top: 30px;
-  background: var(--secondary);
-  color: var(--light);
-  border: none;
-  line-height: 50px;
-  font-size: 18px;
-  letter-spacing: 0.025em;
-  cursor: pointer;
-  font-weight: 800;
-  border-radius: 8px;
-  box-shadow: 0 5px 10px var(--dark-grey);
-  transition: all 0.3s ease;
-}
-
-form .login:hover {
-  background: var(--secondary);
 }
 
 /* Profile */
@@ -801,6 +815,11 @@ form .login:hover {
   overflow-y: auto;
   padding: 40px 32px;
   border-radius: 8px;
+}
+
+.content main .card-row .user-data button {
+  margin-top: 32px;
+  width: 100%;
 }
 
 .image-container {
@@ -848,12 +867,12 @@ form .login:hover {
 
 /* ------------- */
 
-.task-list{
+.task-list {
   width: 100%;
   list-style-type: none;
 }
 
-.task-list li{
+.task-list li {
   width: 100%;
   margin-bottom: 16px;
   background: var(--grey);
@@ -862,20 +881,20 @@ form .login:hover {
   align-items: center;
 }
 
-.task-list li .task-title{
+.task-list li .task-title {
   display: flex;
   align-items: center;
 }
 
-.task-list li .task-title p{
+.task-list li .task-title p {
   margin-left: 6px;
 }
 
-.task-list li.completed{
+.task-list li.completed {
   border-left: 10px solid var(--success);
 }
 
-.task-list li.not-completed{
+.task-list li.not-completed {
   border-left: 10px solid var(--danger);
 }
 
