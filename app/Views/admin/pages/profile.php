@@ -16,47 +16,45 @@
             <label id="foto" for="upload-button">Pilih foto</label>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col flex-2">
                 <label for="nama">Nama</label>
-                <div class="custome-input">
+                <div class="form-input">
                     <input type="text" name="nama" placeholder="Nama belum diisi" autocomplete="off" value="<?= session() -> get('nama') ?>">
                 </div>
             </div>
-            <div class="col">
+            <div class="col flex-2">
                 <label for="nohp">No Hp</label>
-                <div class="custome-input">
+                <div class="form-input">
                     <input type="text" name="nohp" placeholder="No Hp belum diisi" autocomplete="off" value="<?= session() -> get('no_hp') ?>">
                 </div>
             </div>
         </div>
         
         <div class="row">
-            <div class="col">
+            <div class="col flex-2">
                 <label for="email">Email</label>
-                <div class="custome-input">
+                <div class="form-input">
                     <input type="email" name="email" autocomplete="off" value="<?= session() -> get('email') ?>">
                 </div>
             </div>
-            <div class="col">
+            <div class="col flex-2">
                 <label for="text">Anda login sebagai</label>
-                <div class="custome-input">
+                <div class="form-input">
                     <input type="text" name="level" autocomplete="off" class="text-capitalize" value="<?= session() -> get('level_name') ?>" disabled>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col">
+            <div class="col flex-1">
                 <label for="password">Kata Sandi</label>
-                <div class="custome-input">
+                <div class="form-input">
                     <input type="password" name="password" placeholder="Ubah Kata Sandi" autocomplete="off">
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
+            <div class="col flex-1">
                 <label for="password">Konfirmasi Kata Sandi</label>
-                <div class="custome-input">
+                <div class="form-input">
                     <input type="password" name="password" placeholder="Ubah Kata Sandi" autocomplete="off">
                 </div>
             </div>

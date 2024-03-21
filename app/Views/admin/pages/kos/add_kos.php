@@ -29,13 +29,13 @@
             <div class="row">
                 <div class="col flex-3">
                     <label for="kos_nama">Nama Kos</label>
-                    <div class="custome-input">
+                    <div class="form-input">
                         <input type="text" value="<?= old('kos_nama') ?>" name="kos_nama" placeholder="Kos Alden" autocomplete="off">
                     </div>
                 </div>
                 <div class="col flex-1">
                     <label for="kos_jenis">Jenis Kos</label>
-                    <div class="custome-input">
+                    <div class="form-input">
                         <select id="kos_jenis" name="kos_jenis">
                             <option value="Putra">Putra</option>
                             <option value="Putri">Putri</option>
@@ -48,13 +48,13 @@
             <div class="row">
                 <div class="col flex-2">
                     <label for="kos_deposit">Deposit</label>
-                    <div class="custome-input">
+                    <div class="form-input">
                         <input type="text" id="kos_deposit" value="<?= old('kos_deposit') ?>" name="kos_deposit" placeholder="500,000" autocomplete="off">
                     </div>
                 </div>
                 <div class="col flex-1">
                     <label for="kos_waktu_sewa_terdekat">Waktu masuk</label>
-                    <div class="custome-input">
+                    <div class="form-input">
                         <select id="kos_waktu_sewa_terdekat" name="kos_waktu_sewa_terdekat">
                             <option disabled selected>Tedekat</option>
                             <option value="Bisa di hari H setelah pengajuan sewa">Bisa di hari H setelah pengajuan sewa</option>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="col flex-1">
                     <label for="kos_waktu_sewa_terjauh">Waktu masuk</label>
-                    <div class="custome-input">
+                    <div class="form-input">
                         <select id="kos_waktu_sewa_terjauh" name="kos_waktu_sewa_terjauh">
                             <option disabled selected>Terjauh</option>
                             <option value="1 bulan setelah pengajuan sewa">1 bulan setelah pengajuan sewa</option>
@@ -81,13 +81,13 @@
             <div class="row">
                 <div class="col flex-2">
                     <label for="kos_alamat">Alamat Kos</label>
-                    <div class="custome-input">
+                    <div class="form-input">
                         <textarea value="<?= old('kos_alamat') ?>" name="kos_alamat" autocomplete="off"></textarea>
                     </div>
                 </div>
                 <div class="col flex-1">
                     <label for="kos_tentang">Tentang</label>
-                    <div class="custome-input">
+                    <div class="form-input">
                         <textarea value="<?= old('kos_alamat') ?>" name="kos_alamat" autocomplete="off"></textarea>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
             <div class="row">
                 <div class="col flex-1">
                     <label for="kos_coordinat">Koordinat</label>
-                    <div class="custome-input">
+                    <div class="form-input">
                         <input type="text" id="Coordinat" value="<?= old('kos_coordinat') ?>" name="kos_coordinat" placeholder="" autocomplete="off">
                     </div>
                 </div>

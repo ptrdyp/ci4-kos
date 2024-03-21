@@ -27,23 +27,23 @@
 
         <?php echo form_open('admin/edit-fakultas/' . $fakultas['fakultas_id']); ?>
             <div class="row">
-                <div class="col">
+                <div class="col flex-2">
                     <label for="fakultas_nama">Nama Fakultas</label>
-                    <div class="custome-input">
+                    <div class="form-input">
                         <input type="text" value="<?= $fakultas ? $fakultas['fakultas_nama'] : '' ?>" name="fakultas_nama" placeholder="Fakultas Teknik" autocomplete="off">
                     </div>
                 </div>
-                <div class="col">
+                <div class="col flex-2">
                     <label for="fakultas_warna">Warna</label>
-                    <div class="custome-input">
+                    <div class="form-input">
                         <input type="text" value="<?= $fakultas ? $fakultas['fakultas_warna'] : '' ?>" name="fakultas_warna" placeholder="#fecdd3" autocomplete="off">
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col">
+                <div class="col flex-1">
                     <label for="fakultas_geojson">Geojson</label>
-                    <div class="custome-input">
+                    <div class="form-input">
                         <textarea name="fakultas_geojson" autocomplete="off"><?= $fakultas ? $fakultas['fakultas_geojson'] : '' ?></textarea>
                     </div>
                 </div>

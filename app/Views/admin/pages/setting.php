@@ -41,29 +41,29 @@
 
         <?php echo form_open('admin/update-setting'); ?>
         <div class="row">
-            <div class="col">
+            <div class="col flex-2">
                 <label for="nama">Nama Website</label>
-                <div class="custome-input">
+                <div class="form-input">
                     <input type="text" name="setting_nama_web_depan" placeholder="Soedir" autocomplete="off" value="<?= $setting['setting_nama_web_depan'] ?>">
                 </div>
             </div>
-            <div class="col">
+            <div class="col flex-2">
                 <label for="nama">Nama Belakang</label>
-                <div class="custome-input">
+                <div class="form-input">
                     <input type="text" name="setting_nama_web_belakang" placeholder="Kost" autocomplete="off" value="<?= $setting['setting_nama_web_belakang'] ?>">
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col flex-2">
                 <label for="setting_coordinat">Koordinat</label>
-                <div class="custome-input">
+                <div class="form-input">
                     <input type="text" name="setting_coordinat" placeholder="-7.403900991147349, 109.24633745767005" autocomplete="off" value="<?= $setting['setting_coordinat'] ?>">
                 </div>
             </div>
-            <div class="col">
+            <div class="col flex-2">
                 <label for="setting_zoom_view">Zoom View</label>
-                <div class="custome-input">
+                <div class="form-input">
                     <input type="number" name="setting_zoom_view" placeholder="12" min="0" autocomplete="off" value="<?= $setting['setting_zoom_view'] ?>">
                 </div>
             </div>
